@@ -5,7 +5,6 @@ Library  Collections
 Library  DateTime
 Library  OperatingSystem
 Library  SeleniumLibrary
-#Library  ExtendedSelenium2Library
 
 
 *** Variables ***
@@ -93,7 +92,5 @@ My videos
      click element  xpath://*[@id="react-root"]/div/div[1]/div[2]/header/nav/div[2]/div/div/div[1]/ul/li[4]/a/span
 
 Verify Favourites
-#    click element    xpath://*[@class='localStorageCarousel__heading']
-
     ${present}=  Run Keyword And Return Status    Element Should Be Visible  xpath://*[@class='localStorageCarousel__heading']
     should be true  ${present}
